@@ -1,3 +1,4 @@
+Required packages:   
 os
 re
 textract
@@ -7,3 +8,6 @@ PyPDF2
 tempfile
 flask 
 scikit-learn
+
+To install all required packages copy this  " pip install os re textract string docx2txt PyPDF2 tempfile flask scikit-learn "
+and paste in your command prompt
