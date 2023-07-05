@@ -4,9 +4,9 @@ Plagiarism checker is  a web App in Flask that compares text files and find simi
 
 # Software Requirements to run the app :
 Windows or Debian OS
- Flask API.
- Python3.
- Python package installer (pip).
+Flask API.
+Python3.
+Python package installer (pip).
 Code editors like Visual Studio Code, Atom, etc.
 
 
