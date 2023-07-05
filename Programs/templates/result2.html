@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Results</title>
+	<style type="text/css">
+		body {
+			background-color: #232c30;
+			font-family: 'optima', sans-serif;
+			padding-bottom:75px;
+		}
+		h1 {
+			text-align: center;
+			color:darkorange ;
+			margin-top: 50px;
+			margin-bottom: 5px;
+			font-size: 45px;
+			font-weight: bolder;
+			text-shadow: 2px 2px 4px #212121;
+		}
+		
+        h2 {
+			text-align: center;
+			color:#f3f1f1 ;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			font-size: 25px;
+			font-weight: normal;
+			text-shadow: 2px 2px 4px #212121;
+		}
+		table {
+            border-collapse:collapse;
+			border-radius:10px;
+			margin-top: 50px;
+			margin-bottom: 50px;
+            margin-left:auto;
+            margin-right:auto;
+			width:75%;
+            overflow:hidden;
+            box-shadow: 0px 0px 8px #1d1e1f;
+		}
+		th{
+			padding: 20px;
+			border-bottom: 1px solid darkorange ;
+			text-align: center;
+			font-size: 22px;
+			font-weight: bold;
+			color: #fff;
+			background-color: #156b8a;
+		}
+        td{
+			padding: 15px;
+			text-align: left;
+			border-top: 1px solid #AAAAAA ;
+			font-size: 20px;
+			font-weight: bold;
+			color: #fff;
+			background-color: #2c3b42;
+		}
+        th:first-child,td:first-child {
+            width: 50%;
+        }   
+		tr:nth-child(even) {
+			background-color: #1f2c30;
+		}
+		tr:hover {
+			background-color: #3f3f3f;
+        }
+        td.similarity {
+			font-size: 24px;
+			color: darkorange;
+            text-align:center;
+			font-weight: bold;
+			margin-bottom: 30px;
+			text-shadow: 0px 0px 2px #f3a75f;
+		}
+		button {
+			background-color:#1a65d6;
+			color: #fff;
+			font-size: 20px;
+			font-weight: bold;
+			border: none;
+			border-radius: 5px;
+			padding: 10px 20px;
+			box-shadow: 2px 2px 4px #212121;
+			cursor: pointer;
+			margin-top: 20px;
+			margin-bottom:50px;
+            display: block;
+            margin: 0 auto;
+		}
+		button:hover {
+			background-color: #3679df;
+		}
+        .footer {
+			background-color: #1c1c1c;
+			color: #fff;
+			font-size: 14px;
+			text-align: center;
+			padding: 15px;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+	</style>
+</head>
+<body>
+	<h1>PLAGCHEK</h1>
+	<h2>RESULT</h2>
+	<table>
+		<thead>
+			<tr>
+				<th>File Name</th>
+				<th>Similarity Percentage</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for filename, similarity in similarity_dict.items() %}
+			<tr>
+				<td>{{ filename }}</td>
+				<td class="similarity">{{ similarity }}%</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	<button onclick="window.history.back()">Check another</button>
+    <div class="footer">
+		PLAGCHEK&trade; created by Ashique  2023&copy;
+	</div>
+</body>
+</html>
+

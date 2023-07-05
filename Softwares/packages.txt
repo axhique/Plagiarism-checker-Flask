@@ -1,0 +1,9 @@
+os
+re
+textract
+string
+docx2txt
+PyPDF2
+tempfile
+flask 
+scikit-learn

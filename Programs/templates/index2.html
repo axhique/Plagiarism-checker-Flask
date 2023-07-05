@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>File-Folder</title>
+	<style>
+		body {
+			background-color: #232c30;
+			font-family: 'optima', sans-serif;
+		}
+		h1 {
+			text-align: center;
+			color:darkorange ;
+			margin-top: 50px;
+			margin-bottom: 5px;
+			font-size: 45px;
+			font-weight: bolder;
+			text-shadow: 2px 2px 4px #212121;
+		}
+        h2 {
+			text-align: center;
+			color:#f3f1f1 ;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			font-size: 20px;
+			font-weight: normal;
+			text-shadow: 2px 2px 4px #212121;
+		}
+		button {
+			background-color: #1a65d6;
+			color: #fff;
+			font-size: 20px;
+			font-weight: normal;
+			border: none;
+			margin-left:8%;
+            margin-right:auto;
+			border-radius: 5px;
+			padding: 10px 20px;
+			box-shadow: 2px 2px 4px #212121;
+			cursor: pointer;	
+		}
+		button:hover {
+			background-color: #3679df;
+		}
+		.form-container {
+			background-color: #2c3b42;
+			box-shadow: 2px 2px 4px #1d1e1f;
+			border-radius: 13px;
+			padding: 20px;
+			margin-left:auto;
+            margin-right:auto;
+			width:85%;
+			margin-top: 15px;
+			margin-bottom: 50px;
+			text-align: center;
+		}
+		label{
+			font-size: 17px;
+			color: rgb(236, 238, 240);	
+		}
+		form {
+			display:inline-block;
+            font-size:18px;
+			text-align: left;	
+		}
+		input[type="file"] {
+			display: block;
+			margin: 0 auto;
+			margin-bottom: 20px;
+			padding: 10px;
+			width: 80%;
+			border-radius: 5px;
+			box-shadow: 2px 2px 4px #212121;
+			border: none;
+			outline: none;
+			background-color: #9ba3a7;
+			color: #2e2d2d;
+			font-size: 19px;
+			font-weight: normal;
+			cursor: pointer;
+		}
+		input[type="submit"] {
+			background-color: #1a65d6;
+			color: #fff;
+			font-size: 20px;
+			font-weight: bold;
+			border: none;
+			margin-left:30%;
+			border-radius: 5px;
+			padding: 10px 20px;
+            display:block;
+			box-shadow: 2px 2px 4px #212121;
+			cursor: pointer;	
+		}
+		input[type="submit"]:hover {
+			background-color: #3679df;
+		}
+        .footer {
+			background-color: #1c1c1c;
+			color: #fff;
+			font-size: 14px;
+			text-align: center;
+			padding: 15px;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+	</style>
+</head>
+<body>
+    <h1>PLAGCHEK</h1>
+    <h2>File-Folder compare</h2>
+    <a href="/file"><button>File-File</button></a>
+	<div class="form-container">
+    	<form action="/result2" method="POST"  enctype="multipart/form-data">
+        	<label for="file">Qwery File:</label><br>
+        	<input type="file" name="file" id="file" accept=".pdf,.docx,.doc,.txt" required="TRUE"><br>
+        	<label for="folder">Select multiple files to compare:</label><br>
+        	<input type="file" name="folder" id="folder" multiple required="TRUE"><br>
+        	<input type="submit" value="CHECK">
+      </form>
+    </div>
+    <div class="footer">
+		PLAGCHEK&trade; created by Ashique  2023&copy;
+	</div>
+</body>
+</html>
+
