@@ -36,6 +36,7 @@ scikit-learn
 
 
 > Minimum Hardware Requirements:
+
 Processors: Intel Atom® processor or Intel® Core™ i3 processor
 
 Disk space: 1 GB
